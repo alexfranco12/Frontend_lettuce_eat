@@ -1,0 +1,23 @@
+.Header {
+    display: grid;
+    grid-template-columns: auto 40px auto 150px 100px;
+    grid-template-rows: auto;
+    border-bottom: solid 2px;
+}
+.site-name {
+    grid-column: 1 / span 2;
+    text-decoration: none;
+}
+.Navigation {
+    grid-column: 3;
+}
+.AddListing {
+    grid-column: 4;
+    margin: 10px;
+    padding: 10px;
+}
+.Login {
+    grid-column: 5;
+    margin: 10px;
+    padding: 10px;
+}

@@ -1,0 +1,51 @@
+.restaurant-details {
+    margin-top: 20px;
+}
+
+.detail-page-header {
+    display: grid;
+    grid-template-columns: 200px auto 100px 200px;
+    grid-template-rows: auto;
+    margin: 0 30px 15px 10px;
+}
+
+.restaurant-title {
+    grid-column: 1 / span 2;
+}
+.favorite-button {
+    grid-column: 3;
+    margin: 10px;
+    height: 40px;
+}
+.update-button {
+    grid-column: 4;
+    margin: 10px;
+    height: 40px;
+}
+
+.split-body {
+    display: flex;
+}
+.vegan-option-title {
+    display: flex;
+}
+.details {
+    width: 60%;
+    margin-left: 10px;
+}
+.map {
+    text-align: center;
+    width: 40%;
+}
+
+.review-photo-buttons {
+    margin: 25px auto;
+}
+
+.add-review-button, .add-photo-button {
+    margin: auto 10px;
+}
+
+.Add-Menu-Item-Button {
+    margin: auto 50px;
+}
