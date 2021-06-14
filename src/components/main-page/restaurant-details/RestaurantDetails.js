@@ -135,7 +135,11 @@ function RestaurantDetails( {match} ) {
                 <div className="restaurant-title">
                     <h1>{restaurant.name}</h1>
                     {restaurantAddress.map((address) => (
-                        <p className="address" key={address.id}><span>{address.address_1}, {address.city}, {address.state} {address.zip_code}</span></p>
+                        <p 
+                            className="address" 
+                            key={address.id}>
+                            <span>{address.address_1}, {address.city}, {address.state} {address.zip_code}</span>
+                        </p>
                     ))}
                 </div>
                 <Button className="favorite-button"> Favorite </Button>
@@ -166,9 +170,13 @@ function RestaurantDetails( {match} ) {
                         </h2>
                         {restaurantMenuItems.map((item) => (
                             <div key={item.id}>
-                                <h5> {item.item_name} 
+                                <h5> {item.item_name}
+                                    <Button
+                                        className="btn btn-secondary"
+                                        > UPDATE Item
+                                    </Button>
                                     <Button 
-                                        className="" 
+                                        className="btn btn-danger"
                                         onClick={() => deleteItem(item.id)}
                                         > DELETE Item 
                                     </Button>
