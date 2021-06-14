@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 function Navigation() {
     return (
         <div className='navigation'>
-            <Link to={"/about"}>
+            {/* <Link to={"/about"}>
                 <h5>About</h5>
-            </Link>
+            </Link> */}
             
         </div>
     );

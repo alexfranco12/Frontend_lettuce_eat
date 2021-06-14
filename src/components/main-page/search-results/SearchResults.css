@@ -1,0 +1,17 @@
+.search-results {
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurant-card {
+    display: flex;
+}
+
+.result-image {
+    width: 5%;
+}
+
+.search-name {
+   align-self: center;
+   margin: auto 10px;
+}

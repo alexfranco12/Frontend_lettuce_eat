@@ -8,6 +8,7 @@ import RestaurantDetails from "./components/main-page/restaurant-details/Restaur
 import UserProfile from "./components/main-page/user-profile/UserProfile";
 import About from './components/main-page/about/About'
 import AddListing from './components/main-page/add-listing/AddListing'
+import SearchResults from "./components/main-page/search-results/SearchResults";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
 
       <main>
         <Route exact path="/" component={Home} />
+        <Route path="/search-results/:search" render={routerProps => (
+          <SearchResults match={routerProps.match} />
+        )}/>
         <Route path="/add-listing" component={AddListing} />
         <Route path="/restaurant/:id" render={routerProps => (
           <RestaurantDetails match={routerProps.match} />

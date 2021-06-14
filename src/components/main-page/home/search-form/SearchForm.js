@@ -1,29 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 import './SearchForm.css'
-import { Form, InputGroup, FormControl, Button } from 'react-bootstrap'
+import { Form, Button } from 'react-bootstrap'
 
 function SearchForm() {
-    function handleSubmit() {
-    
+    const [searchInput, setSearchInput] = useState("")
+
+    function handleChange(e) {
+        console.log(e.target.value)
+        setSearchInput(e.target.value)
     }
+
     return (
         <div className="Search-Form">
-            <h3>
+            <h3 className="search-title">
                 Search for your favorite restaurant:
             </h3>
-            <Form className="searchBar" onSubmit={handleSubmit}>
-                <InputGroup className="mb-3">
-                    <FormControl
-                        placeholder="Search By Name"
-                        aria-label="Restaurant Name"
-                        aria-describedby="basic-addon2"
+            <Form className="search-bar">
+                <div className="input-group mb-3">
+                    <input 
+                        type="text" 
+                        onChange={handleChange}
+                        className="form-control" 
+                        name="search" 
+                        placeholder="Search By Name" 
+                        aria-label="Restaurant Name" 
+                        aria-describedby="button-addon2" 
                     />
-                    <InputGroup.Append>
-                        <Button variant="primary" type="submit">
-                            Submit
+                    <Link to={`/search-results/${searchInput}`}>
+                        <Button 
+                            className="btn btn-primary" 
+                            type="button" 
+                            id="button-addon2" 
+                            > Submit
                         </Button>
-                    </InputGroup.Append>
-                </InputGroup>
+                    </Link>
+                </div>
             </Form>
         </div>
     );
