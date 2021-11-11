@@ -1,12 +1,14 @@
-import React from 'react';
-import './Footer.css'
+import styled from 'styled-components';
 
-function Footer() {
-    return (
-        <div className='Footer'>
-            &copy; Alex Franco
-        </div>
-    );
-}
+export const Footer = () => {
+  return (
+    <FooterStyled>
+      &copy; Alex Franco
+    </FooterStyled>
+  );
+};
 
-export default Footer;
+const FooterStyled = styled.div`
+  grid-column: 2 / span 12;
+  grid-row: 4;
+`;
