@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Button } from 'react-bootstrap'
-import Login from './login/Login'
-import Navigation from './navigation/Navigation';
+import { Login } from './Login';
 
 export const Header = () => {
   return (
@@ -11,21 +9,15 @@ export const Header = () => {
           <h1> Lettuce Eat </h1>
       </Link>
       
-      <div className='Navigation'>
-          <Navigation/>
-      </div>
+      <div className='links'>
+        <div className='link'>
+            <Link to="/add-listing">Add Listing</Link>
+        </div>
 
-      <div className='AddListing'>
-          <Link to="/add-listing">
-              <Button>Add Listing</Button>
-          </Link>
-          
+        <div className='link'>
+            <Login />
+        </div>
       </div>
-
-      <div className='Login'>
-          <Login />
-      </div>
-        
     </HeaderStyled>
   );
 };
@@ -34,4 +26,13 @@ const HeaderStyled = styled.div`
   grid-column: 2 / span 12;
   grid-row: 1;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & .links {
+    display: flex;
+    align-items: center;
+    & :not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
 `;

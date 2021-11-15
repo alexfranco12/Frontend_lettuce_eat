@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Route } from "react-router-dom";
-import Home from "./components/main-page/home/Home";
+import { HomePage } from "./pages";
 import RestaurantDetails from "./components/main-page/restaurant-details/RestaurantDetails";
 import UserProfile from "./components/main-page/user-profile/UserProfile";
 import About from './components/main-page/about/About'
@@ -13,7 +13,7 @@ function App() {
   return (
     <MainLayout>
       <AppStyled>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={HomePage} />
         <Route path="/search-results/:search" render={routerProps => (
           <SearchResults match={routerProps.match} />
         )}/>
